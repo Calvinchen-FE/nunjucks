@@ -1,0 +1,31 @@
+{% macro generate(titles,data,themes,trThems) %}
+<!-- table start -->
+	{% set theme = themes|join(' ') %}
+	<table class="table {{theme}}">
+		<thead> 
+			<tr> 
+				{% for title in titles %}
+					<th>{{title}}</th>
+				{% endfor %}
+			</tr> 
+		</thead> 
+		<tbody> 
+			{% for items in data %}
+				{% if loop.first %}
+					<tr class="{{trThems[0]}}">
+						{% for item in items %}
+							<td class="{{trThems}}">{{item}}</td> 
+						{% endfor %}
+					</tr>
+				{% else %}
+					<tr>
+						{% for item in items %}
+							<td class="{{trThems}}">{{item}}</td> 
+						{% endfor %}
+					</tr>
+				{% endif %}
+			{% endfor %}
+		</tbody> 
+	</table>
+<!-- table end -->
+{% endmacro %}

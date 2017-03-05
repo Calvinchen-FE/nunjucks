@@ -1,0 +1,30 @@
+{% import "./../components/header/html.njk" as header %}
+{% import "./../components/footer/html.njk" as footer %}
+{% import "./../components/breadcrumb/html.njk" as breadcrumb %}
+{% import "./../components/badge/html.njk" as badge %}
+{% import "./../components/list-group/html.njk" as listGroup %}
+{% import "./../components/panel/html.njk" as panel %}
+{% import "./../components/table/html.njk" as table %}
+{% import "./../components/form/html.njk" as form %}
+{% import "./../components/button/html.njk" as button %}
+{% import "./../components/dropdown/html.njk" as dropdown %}
+{% import "./../components/nav/html.njk" as nav %}
+{% import "./../components/pagination/html.njk" as pagination %}
+{% import "./../components/progress/html.njk" as progress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+{{ header.generate() }}
+	<section class="container">
+	  {% block main %}{% endblock %}
+	</section>
+{{ footer.generate() }}
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{% macro generate(items,index) %}
+	<ul class="list-group">
+		{% for item in items %}
+			<li class="list-group-item  {{ 'active' if index == 20 else '' }}"><a href="#{{item}}">{{item}}</a></li>
+		{% endfor %}
+	</ul>
+{% endmacro %}

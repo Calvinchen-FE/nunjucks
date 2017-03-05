@@ -1,0 +1,33 @@
+{% macro generate(theme) %}
+	<div class="panel {{theme}}">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Panel title</h3>
+	  </div>
+	  <div class="panel-body">
+	    Panel content
+	  </div>
+	  <div class="panel-footer">Panel footer</div>
+	</div>
+{% endmacro %}
+
+{% macro generateNoFooter(theme) %}
+	<div class="panel {{theme}}">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Panel title</h3>
+	  </div>
+	  <div class="panel-body">
+	    Panel content
+	  </div>
+	</div>
+{% endmacro %}
+
+{% macro generateNoBody(theme) %}
+	<div class="panel {{theme}}">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Panel title</h3>
+	  </div>
+	  <div class="panel-footer">
+	    Panel footer
+	  </div>
+	</div>
+{% endmacro %}

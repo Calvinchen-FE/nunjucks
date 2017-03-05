@@ -1,0 +1,7 @@
+{% macro generate(num,theme) %}
+	<div class="progress">
+	  <div class="progress-bar {{theme}}" role="progressbar" aria-valuenow="{{num}}" aria-valuemin="0" aria-valuemax="100" style="width: {{num}}%">
+	    <span class="sr-only">{{num}}% Complete (success)</span>
+	  </div>
+	</div>
+{% endmacro %}

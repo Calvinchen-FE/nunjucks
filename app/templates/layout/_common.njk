@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% macro import_pages(path) %}
+  {% include path + '' %}
+{% endmacro %}
+
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<section class="main">
+  {% block main %}{% endblock %}
+</section>
+
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>

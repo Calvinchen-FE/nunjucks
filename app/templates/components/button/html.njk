@@ -1,0 +1,7 @@
+{% macro generate(type,text,size) %}
+	<button class="btn btn-{{type}} {{size}}">{{text}}</button>
+{% endmacro %}
+
+{% macro generateLink(type,text,size) %}
+	<a class="btn btn-{{type}} {{size}}" href="#" role="button">{{text}}</a>
+{% endmacro %}

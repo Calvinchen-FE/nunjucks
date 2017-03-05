@@ -1,0 +1,12 @@
+{% macro generate(data,theme) %}
+
+<form class="{{theme}}">
+  {% for obj in data %}
+    <div class="form-group">
+      <label for="{{obj.id}}">{{obj.name}}</label>
+      <input type="{{obj.type}}" class="form-control" id="{{obj.id}}" placeholder="{{obj.name}}">
+    </div>
+  {% endfor %}
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+{% endmacro %}

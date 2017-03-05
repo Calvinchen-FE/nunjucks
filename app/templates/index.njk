@@ -1,0 +1,62 @@
+{% extends "layout/_parent.njk" %}
+	{% block main %}
+		{% set listItems = ['badge','breadcrumb','button','dropdown','form','list-group','nav','pagination','panel','progress','table'] %}
+		<div class="row" style="position:relative;">
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 hidden-xs" style="position:fixed;">
+				{{ listGroup.generate(listItems,1) }}
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
+				<div id="badge" style="margin-bottom: 20px;">
+					{{ badge.generate(2) }}
+				</div>
+				<div id="breadcrumb">
+					{{ breadcrumb.generate(['aa','bb','cc','dd','ee']) }}
+				</div>
+				<div id="button" style="margin-bottom: 20px;">
+					{{ button.generate('primary','submit') }}
+					{{ button.generate('primary','test','btn-sm') }}
+					{{ button.generateLink('success','test','btn-lg') }}
+				</div>
+				<div id="dropdown" style="margin-bottom: 20px;">
+					{{ dropdown.generate('dropdown',['Action','Action']) }}
+				</div>
+				{% set formData = [
+					{id:1,name:'Email address',tpye:'email'},
+					{id:2,name:'Password',type:'password'}
+					] 
+				%}
+				<div id="form" style="margin-bottom: 20px;">
+					{{ form.generate(formData,'form-inline') }}
+				</div>
+
+				{% set list = ['test','lorem'] %}
+				<div id="listGroup">
+				{{ listGroup.generate(list,1) }}
+				</div>
+				<div id="nav">
+					{{ nav.generate(['Home','Profile','Messages'],'nav-tabs nav-justified') }}
+				</div>
+				<div id="pagination">
+				{{ pagination.generate([1,2,3,4]) }}
+				</div>
+				<div id="panel">
+					{{ panel.generate('panel-success') }}
+					{{ panel.generateNoFooter('panel-danger') }}
+					{{ panel.generateNoBody('panel-warning') }}
+				</div>
+				<div id="progress">
+					{{ progress.generate(50,'progress-bar-success') }}
+				</div>
+				{% set titles = ['#','First Name','Last Name','Username'] %}
+				{% set data = [['1','Mark','Otto','@mdo'],['2','Jacob','Thornton','	@fat']] %}
+				{% set theme = ['table-bordered','table-hover'] %}
+				{% set trTheme = ['success','danger'] %}
+				<div id="table">
+					{{ table.generate(titles,data,theme,trTheme) }}
+				</div>
+				<div class="lead">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, veniam magnam deleniti voluptate sint quos earum necessitatibus impedit quis, molestiae mollitia eveniet ducimus atque cupiditate vitae laborum eos voluptatum exercitationem. ipsum dolor sit amet, consectetur adipisicing elit. Veniam soluta iure consectetur ea cum optio, sapiente fuga voluptatem dolores, porro, cupiditate incidunt itaque, quibusdam unde sed ut! Ad, maiores, nihil. ipsum dolor sit amet, consectetur adipisicing elit. Quo eum porro dolore obcaecati natus voluptas similique vel asperiores sed. Ex eius at velit quas quaerat, atque tempora quo, delectus dolorum? ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolor assumenda harum recusandae libero alias consectetur esse quam obcaecati est voluptate minima, ducimus. Voluptates accusamus, mollitia obcaecati enim reiciendis sit! ipsum dolor sit amet, consectetur adipisicing elit. Commodi error ipsam laudantium, praesentium in aliquam adipisci itaque nisi impedit esse, veniam hic iste eveniet sed, rerum harum odit illo deleniti. ipsum dolor sit amet, consectetur adipisicing elit. Omnis, maxime, est distinctio dolorem, aliquid facere dolores quis expedita modi laborum, suscipit voluptatem. Aliquid, provident. Ipsam minus nostrum facere alias quia. ipsum dolor sit amet, consectetur adipisicing elit. Perferendis magnam quam, cupiditate labore reiciendis quas quidem sint totam debitis ut nam placeat obcaecati voluptas libero recusandae velit harum, natus voluptatibus! ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, voluptatem officia assumenda ipsum esse reiciendis ratione autem? Nihil sapiente, laborum, hic odio cum sint totam incidunt voluptatum architecto, animi doloremque.
+				</div>
+			</div>
+		</div>
+	{% endblock %}
